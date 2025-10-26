@@ -1,43 +1,52 @@
 
 #007BFF: #007BFF;
-#f9fbff: #f9fbff;
+#f8fafd: #f8fafd;
 #333: #333;
 #e3f2fd: #e3f2fd;
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f9fbff;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: #f8fafd;
   color: #333;
   margin: 0;
   padding: 0;
+  line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
 .container {
-  max-width: 900px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 20px;
 }
 
 header {
   background-color: white;
-  border-bottom: 1px solid #ccc;
-  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 123, 255, 0.1);
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 
   h1 {
-    margin: 0;
     color: #007BFF;
+    margin: 0;
+    text-align: center;
   }
 
   nav {
+    text-align: center;
     margin-top: 10px;
 
     a {
-      margin-right: 20px;
-      text-decoration: none;
       color: #007BFF;
+      text-decoration: none;
       font-weight: bold;
+      margin: 0 15px;
+      transition: all 0.3s ease;
 
       &:hover {
+        color: darken(#007BFF, 10%);
         text-decoration: underline;
       }
     }
@@ -45,14 +54,18 @@ header {
 }
 
 section {
-  margin-bottom: 40px;
+  margin: 40px 0;
 
   h2 {
     color: #007BFF;
+    font-size: 24px;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 10px;
   }
 
   p {
-    line-height: 1.6;
+    font-size: 18px;
+    margin-top: 10px;
   }
 }
 
@@ -60,4 +73,32 @@ footer {
   background-color: #e3f2fd;
   padding: 15px 0;
   text-align: center;
+  font-size: 14px;
+  color: #333;
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
 }
